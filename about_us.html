@@ -58,15 +58,15 @@
         .btn-donate {
             font-size: 18px;
             padding: 12px 30px;
-            
             color: #4CAF50;
-            /* border: 2px solid #4CAF50; */
+            border: 2px solid #4CAF50;
+            
         }
         
         .btn-donate:hover {
             background-color: #4CAF50;
             color: white;
-            border: 2px solid #4CAF50;
+            
         }
         
         .btn-action {
@@ -126,6 +126,21 @@
             transform: rotate(-45deg);
             bottom: 11px;
         }
+        @media (max-width: 767px) {
+        
+        
+            .btn-donate, .btn-action {
+                padding: 10px 20px;
+                font-size: 16px;
+                width: 100%;
+                margin-bottom: 10px;
+                border: 1px solid;
+            }
+            .btn-donate:hover
+            {
+                background-color: #1e8a4f;
+            }
+        }
 
         /* Main Content Styles */
         :root {
@@ -145,7 +160,7 @@
             width: 100%;
             overflow: hidden;
             margin-bottom: 60px;
-            height: 400px; /* Decreased height */
+            height: 400px;
         }
         
         .full-width-banner {
@@ -153,8 +168,6 @@
             height: 100%;
             object-fit: cover;
             display: block;
-            
-            
         }
         
         h2 {
@@ -186,7 +199,7 @@
             background-color: #f9f9f9;
             padding: 80px 0;
             margin-bottom: 60px;
-            width: 100%; /* Full width */
+            width: 100%;
         }
         
         .team-container {
@@ -194,8 +207,7 @@
             margin: 0 auto;
             padding: 0 20px;
         }
-        .team-container h1
-        {
+        .team-container h1 {
             text-align: center;
             font-weight: bold;
             font-size: 50px;
@@ -215,7 +227,7 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
             display: flex;
             transition: transform 0.3s, box-shadow 0.3s;
-            height: 100%; /* Increased height */
+            height: 100%;
             width: 100%;
         }
         
@@ -225,13 +237,13 @@
         }
         
         .team-card-image {
-            width: 45%; /* Increased width */
+            width: 45%;
             height: 100%;
-            object-fit:fill;
+            /* object-fit: cover; */
         }
         
         .team-card-content {
-            padding: 25px; /* Increased padding */
+            padding: 25px;
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -239,7 +251,7 @@
         
         .team-member-name {
             font-weight: 700;
-            font-size: 1.3rem; /* Increased size */
+            font-size: 1.3rem;
             color: var(--primary-color);
             margin-bottom: 8px;
         }
@@ -247,8 +259,8 @@
         .team-member-role {
             color: #4CAF50;
             font-weight: 600;
-            margin-bottom: 12px; /* Increased margin */
-            font-size: 1rem; /* Increased size */
+            margin-bottom: 12px;
+            font-size: 1rem;
         }
         
         .founder-role {
@@ -264,7 +276,7 @@
         }
         
         .team-member-bio {
-            font-size: 1rem; /* Increased size */
+            font-size: 1rem;
             line-height: 1.6;
             margin-bottom: 15px;
             flex-grow: 1;
@@ -277,7 +289,7 @@
         
         .social-icon {
             color: #555;
-            font-size: 1.1rem; /* Increased size */
+            font-size: 1.1rem;
             transition: color 0.3s;
         }
         
@@ -418,9 +430,7 @@
             font-size: 25px;
             margin: 0 10px;
         }
-        .footer-social-icons a:hover
-        {
-
+        .footer-social-icons a:hover {
             color: #28b457;
         }
 
@@ -440,6 +450,12 @@
             transform: translateX(0);
         }
 
+        /* Project Images */
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+
         @media (max-width: 992px) {
             .team-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -447,8 +463,19 @@
         }
         
         @media (max-width: 768px) {
+            /* Prevent horizontal scrolling */
+            html, body {
+                overflow-x: hidden;
+                width: 100%;
+            }
+            
             .full-width-banner-container {
-                height: 300px; /* Adjusted for mobile */
+                height: 300px;
+            }
+            
+            .team-container {
+                width: 100%;
+                padding: 0 15px;
             }
             
             .team-grid {
@@ -462,7 +489,8 @@
             
             .team-card-image {
                 width: 100%;
-                height: 250px; /* Increased height for mobile */
+                /* height: 250px; */
+                object-fit: cover;
             }
             
             .footer-column {
@@ -493,6 +521,39 @@
                 transform: none;
                 text-align: center;
             }
+
+            /* Project section adjustments */
+            section.container.py-5 img {
+                max-width: 100%;
+                height: auto !important;
+            }
+
+            .mission-title {
+                font-size: 36px;
+            }
+
+            .mission-text {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .team-container h1 {
+                font-size: 36px;
+            }
+            
+            .mission-title {
+                font-size: 30px;
+            }
+            
+            .mission-text {
+                font-size: 15px;
+            }
+            
+            .nav-link {
+                margin-left: 0;
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -515,7 +576,7 @@
                 </ul>
                 <div class="d-lg-none w-100">
                     <a href="https://www.zeffy.com/fundraising/d0e21744-d53e-44e0-bb4e-68def143a1a1" target="_blank" class="btn btn-donate">DONATE</a>
-                    <a href="take action.html" target="_blank" class="btn btn-action">TAKE ACTION</a>
+                    <!-- <a href="take action.html" target="_blank" class="btn btn-action">TAKE ACTION</a> -->
                 </div>
             </div>
             <a href="https://www.zeffy.com/fundraising/d0e21744-d53e-44e0-bb4e-68def143a1a1" target="_blank" class="btn btn-donate d-none d-lg-block" style="border-color: #28b457;">DONATE</a>
@@ -593,9 +654,6 @@
                         <div class="team-member-name">Karen Altshuler</div>
                         <div class="team-member-role">Vice-President</div>
                         <div class="team-member-bio">Grandmother, mom and Yogi<3</div>
-                        <!-- <div class="team-social-icons">
-                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        </div> -->
                     </div>
                 </div>
                 
@@ -703,9 +761,6 @@
                         <div class="team-member-name">Natalie Sager</div>
                         <div class="team-member-role">Community Partner</div>
                         <div class="team-member-bio">Mama, Yoga Teacher, Award Winning Author, Speaker, Holistic Health Consultant, Dancer & Spiritual Guide</div>
-                        <div class="team-social-icons">
-                            
-                        </div>
                     </div>
                 </div>
                 
@@ -752,7 +807,7 @@
     <section class="container py-5">
         <div class="row align-items-center">
             <div class="col-md-6 mb-4 mb-md-0">
-                <img alt="Elisa" class="img-fluid rounded" src="images/Natalie Sager.png" style="height: 650px; width: 550px; object-fit: cover;"/>
+                <img alt="Elisa" class="img-fluid rounded" src="images/Natalie Sager.png" style="height: 650px; width: 100%; object-fit: cover;"/>
             </div>
             <div class="col-md-6">
                 <small class="text-muted">Holistic Home Remedies for Parents</small>
