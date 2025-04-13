@@ -166,14 +166,16 @@
             width: 100%;
             overflow: hidden;
             margin-bottom: 20px;
-            height: 400px;
+            height: auto;
             background-color: #f8f9fa;
         }
         
+      
         .full-width-banner {
-            width: 1590px;
-            height: 450px;
-            object-fit:fill;
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+            
             display: block;
             
         }
@@ -227,7 +229,7 @@
         }
         
         .team-container {
-            width: 90%;
+            width: 100%;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -478,6 +480,13 @@
         .img-fluid {
             max-width: 100%;
             height: auto;
+        }
+        @media (max-width: 767px) {
+        
+            .img-fluid {
+            width: 100%;
+           
+        }
         }
 
         @media (max-width: 992px) {
@@ -796,7 +805,7 @@
     <section class="container py-5">
         <h1 class="text-center fw-bold mb-5" style="font-weight: bolder; margin-top: -90px;">Projects to be funded</h1>
         <div class="row align-items-center">
-            <div class="col-md-6 mb-4 mb-md-0">
+            <div class="col-md-6 mb-4 mb-md-0" >
                 <img alt="Elisa" class="img-fluid rounded" src="images/Elisa Cruz.jpg"/>
             </div>
             <div class="col-md-6">
@@ -831,7 +840,7 @@
     <section class="container py-5">
         <div class="row align-items-center">
             <div class="col-md-6 mb-4 mb-md-0">
-                <img alt="Elisa" class="img-fluid rounded" src="images/Natalie Sager.png" style="height: 650px; width: 100%; object-fit: cover;"/>
+                <img alt="Elisa" class="img-fluid rounded" src="images/Natalie Sager.png" style="height: 650px; width: 530px; object-fit: cover;" />
             </div>
             <div class="col-md-6">
                 <small class="text-muted">Holistic Home Remedies for Parents</small>
