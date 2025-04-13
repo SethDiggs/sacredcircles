@@ -5,6 +5,10 @@
     <!-- Primary Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="true">
     <title>Essential Life Skills for Kids and Communities</title>
     <meta name="description"
         content="Empowering kids with life skills like emotional intelligence, creativity, and mindfulness. Join us to support healthier communities.">
@@ -13,9 +17,7 @@
     <meta name="author" content="Your Organization Name">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#4CAF50">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="HandheldFriendly" content="true">
+
 
     <!-- Open Graph / Facebook Meta Tags -->
     <meta property="og:type" content="website">
@@ -43,12 +45,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <style>
-        /* Base Styles */
-        html {
-            -webkit-text-size-adjust: 100%;
-            -ms-text-size-adjust: 100%;
-        }
-        
         body {
             background-color: #ffffff;
             font-family: 'Arial', sans-serif;
@@ -57,11 +53,7 @@
             overflow-x: hidden;
         }
 
-        a, button, [role="button"] {
-            touch-action: manipulation;
-        }
-
-        /* Header/Navbar Styles */
+        /* Header/Navbar Styles from First Code */
         .navbar {
             background-color: white;
             padding: 20px 0;
@@ -70,14 +62,12 @@
 
         .navbar-brand img {
             height: 65px;
-            transition: height 0.3s ease;
         }
 
         .nav-link {
             color: black !important;
             font-size: 18px;
             margin-left: 45px;
-            transition: all 0.3s ease;
         }
 
         .nav-link:hover {
@@ -90,7 +80,6 @@
             background-color: #4CAF50;
             color: white;
             border: 2px solid #4CAF50;
-            transition: all 0.3s ease;
         }
 
         .btn-donate:hover {
@@ -105,7 +94,6 @@
             border: 2px solid #4CAF50;
             background-color: white;
             color: #4CAF50;
-            transition: all 0.3s ease;
         }
 
         .btn-action:hover {
@@ -158,11 +146,10 @@
             bottom: 11px;
         }
 
-        /* Hero Section */
+        /* Rest of your existing styles from second code */
         .hero {
-            background: url('images/hero.jpeg') no-repeat center center/cover;
-            height: 100vh;
-            min-height: 650px;
+            background: url('images/hero.jpeg') no-repeat center /cover;
+            height: 650px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -170,27 +157,73 @@
             color: white;
             padding: 20px;
             background-attachment: fixed;
+
         }
-       
+
         .hero h1 {
             font-size: 3.5rem;
             font-weight: bold;
             margin-top: 200px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            transition: all 0.3s ease;
         }
 
         .hero p {
             max-width: 600px;
             font-size: 1.2rem;
-            line-height: 1.5;
+            line-height: 1.2;
             margin: auto;
             margin-top: 20px;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-            transition: all 0.3s ease;
         }
 
-        /* Mission Section */
+        @media (max-width: 767px) {
+            .hero {
+                background-image: url('images/hero.jpeg');
+                background-repeat: no-repeat;
+                background-position: 44% center;
+                /* Moves image slightly right (55% instead of 50%) */
+                
+                background-size: cover;
+            }
+            
+
+        }
+
+        @media (max-width: 479px) {
+            .hero p {
+                margin-bottom: 10px;
+            }
+
+            .hero {
+                background-position: 44% center;
+                /* Center-align for tiny screens */
+
+                background-size: cover;
+            }
+        }
+        @media (max-width: 480px) and (orientation: portrait) {
+    .hero h1 {
+        font-size: 2.2rem;
+        margin-top: 120px;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    /* Ensure mission section images stack properly */
+    .mission-section .col-md-5, 
+    .mission-section .col-md-7 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+        /* Mission Section Background */
+        /* .mission-section {
+            background-color: #f3f3f3;
+
+        } */
+
         .mission-title {
             color: #DDDDDF;
             font-weight: bold;
@@ -218,18 +251,31 @@
         .mission-img {
             width: 100%;
             height: 400px;
-            object-fit: cover;
+            object-fit: fill;
             padding-top: 10px;
             padding-bottom: 10px;
             margin-left: 20px;
+
         }
+
+
+
+
 
         .mission-text {
             background-color: white;
             padding: 40px;
         }
 
-        /* Focus Section */
+        @media (max-width: 767px) {
+            .mission-img {
+                padding-top: 0px;
+                padding-bottom: 0px;
+                margin-left: 0px;
+            }
+
+        }
+
         .focus-section {
             padding: 60px 0 40px;
             background-color: #f3f3f3;
@@ -241,7 +287,6 @@
             margin-bottom: 20px;
             flex: 0 0 28%;
             max-width: 28%;
-            transition: all 0.3s ease;
         }
 
         .focus-box {
@@ -253,7 +298,6 @@
             text-align: center;
             min-height: 480px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
         }
 
         .focus-emoji {
@@ -344,7 +388,7 @@
         .gallery-row:last-child .gallery-item:nth-child(1) img {
             width: 100%;
             height: 450px;
-            object-fit: cover;
+            object-fit: fill;
             object-position: center top;
             display: block;
             transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -497,7 +541,9 @@
             margin: 0 20px;
         }
 
-        /* Take Action Section */
+
+
+        /* Updated Take Action Section */
         .take-action-section {
             background-color: #f8f9fa;
             padding: 100px 0;
@@ -510,6 +556,7 @@
                 transform: translateY(50px);
                 opacity: 0;
             }
+
             to {
                 transform: translateY(0);
                 opacity: 1;
@@ -683,30 +730,15 @@
         .social-icons a {
             color: white;
             font-size: 25px;
-            transition: color 0.3s;
         }
+
         .social-icons a:hover {
+
             color: #28b457;
         }
 
-        /* ==================== */
-        /* RESPONSIVE STYLES */
-        /* ==================== */
-
-        /* Large devices (desktops, less than 1200px) */
-        @media (max-width: 1199.98px) {
-            .hero h1 {
-                font-size: 3rem;
-            }
-        }
-
-        /* Medium devices (tablets, less than 992px) */
-        @media (max-width: 991.98px) {
-            .hero h1 {
-                font-size: 2.8rem;
-                margin-top: 180px;
-            }
-            
+        /* Responsive Gallery Styles */
+        @media (max-width: 991px) {
             .gallery-row {
                 flex-direction: column;
             }
@@ -720,28 +752,11 @@
             .gallery-item {
                 margin-bottom: 2px;
             }
-            
-            .focus-column {
-                flex: 0 0 45%;
-                max-width: 45%;
-            }
         }
 
-        /* Small devices (landscape phones, less than 768px) */
-        @media (max-width: 767.98px) {
-            .hero {
-                background-attachment: scroll;
-                background-position: center center !important;
-                height: 80vh;
-            }
-            
+        @media (max-width: 767px) {
             .hero h1 {
                 font-size: 2.5rem;
-                margin-top: 150px;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
             }
 
             .focus-column {
@@ -763,18 +778,7 @@
             .mission-text p {
                 font-size: 1.1rem;
             }
-            
-            .mission-img {
-                padding-top: 0;
-                padding-bottom: 0;
-                margin-left: 0;
-                height: 350px;
-            }
-            
-            .mission-section .row {
-                flex-direction: column;
-            }
-            
+
             /* Mobile Gallery - 1 image per row */
             .gallery-row {
                 flex-wrap: wrap;
@@ -834,6 +838,10 @@
                 margin-top: 0;
             }
 
+            .btn-donate {
+                margin-top: 10px;
+            }
+
             /* Mobile Navbar Adjustments */
             .nav-link {
                 margin-left: 0;
@@ -845,73 +853,17 @@
                 height: 50px;
             }
 
-            .btn-donate, .btn-action {
+            .btn-donate,
+            .btn-action {
                 padding: 10px 20px;
                 font-size: 16px;
                 width: 100%;
                 margin-bottom: 10px;
                 border: 1px solid;
             }
-            
-            .navbar-collapse {
-                background-color: white;
-                padding: 15px;
-                margin-top: 10px;
-                border-radius: 5px;
-            }
-        }
 
-        /* Extra small devices (portrait phones, less than 576px) */
-        @media (max-width: 575.98px) {
-            .hero {
-                height: 70vh;
-                min-height: 500px;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-                margin-top: 120px;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-                margin-bottom: 10px;
-            }
-            
-            .mission-img {
-                height: 300px;
-            }
-            
-            .mission-text {
-                padding: 30px 20px;
-            }
-            
-            .gallery-row:first-child .gallery-item img,
-            .gallery-row:last-child .gallery-item img {
-                height: 300px;
-            }
-            
-            .take-action-title {
-                font-size: 22px;
-            }
-            
-            .navbar-brand img {
-                height: 45px;
-            }
-        }
-
-        /* Very small devices (phones, less than 400px) */
-        @media (max-width: 399.98px) {
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-            
-            .mission-title {
-                font-size: 1.8rem;
-            }
-            
-            .focus-heading {
-                font-size: 1.3rem;
+            .btn-donate:hover {
+                background-color: #1e8a4f;
             }
         }
     </style>
@@ -921,7 +873,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="images/logo.png" alt="Logo" class="img-fluid">
+                <img src="images/logo.png" alt="Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -936,6 +888,7 @@
                 <div class="d-lg-none w-100">
                     <a href="https://www.zeffy.com/fundraising/d0e21744-d53e-44e0-bb4e-68def143a1a1" target="_blank"
                         class="btn btn-donate">DONATE</a>
+                    <!-- <a href="take action.html" class="btn btn-action">TAKE ACTION</a> -->
                 </div>
             </div>
             <a href="https://www.zeffy.com/fundraising/d0e21744-d53e-44e0-bb4e-68def143a1a1" target="_blank"
@@ -944,7 +897,7 @@
     </nav>
 
     <header class="hero">
-        <div class="container">
+        <div>
             <h1>Essential Life Skills For Kids <br> and Communities</h1>
             <p>
                 Skills like emotional intelligence, yoga, breathwork, creativity,
@@ -959,7 +912,7 @@
         <div class="container-fluid p-0">
             <div class="row g-0">
                 <div class="col-md-5">
-                    <img src="images/2nd img.png" alt="Our Mission" class="mission-img img-fluid">
+                    <img src="images/2nd img.png" alt="Our Mission" class="mission-img">
                 </div>
                 <div class="col-md-7 mission-text d-flex flex-column justify-content-center">
                     <h2 class="mission-title">
@@ -1045,7 +998,7 @@
             <!-- First Row - Will show as single column on mobile -->
             <div class="gallery-row">
                 <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-index="0">
-                    <img src="images/bowl.png" alt="Mindful Activities" class="img-fluid">
+                    <img src="images/bowl.png" alt="Mindful Activities">
                     <div class="gallery-caption">
                         <p>Featured Teacher</p>
                         <h3>Nayeli @LittleHandsAndNature</h3>
@@ -1053,7 +1006,7 @@
                 </div>
 
                 <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-index="1">
-                    <img src="images/game.png" alt="Educational Games" class="img-fluid">
+                    <img src="images/game.png" alt="Educational Games">
                     <div class="gallery-caption">
                         <p>Featured Teacher</p>
                         <h3>Amanda @BocaKidsYoga</h3>
@@ -1064,7 +1017,7 @@
             <!-- Second Row - Will show as single column on mobile -->
             <div class="gallery-row">
                 <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-index="2">
-                    <img src="images/fun.png" alt="Fun Activities" class="img-fluid">
+                    <img src="images/fun.png" alt="Fun Activities">
                     <div class="gallery-caption">
                         <p>Featured Teacher</p>
                         <h3>Brielle @RaisingEarthGuardians</h3>
@@ -1073,7 +1026,7 @@
 
                 <!-- 4th image with no hover effect -->
                 <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-index="3">
-                    <img src="images/bar code.jpg" alt="Technology Integration" class="img-fluid">
+                    <img src="images/bar code.jpg" alt="Technology Integration">
                 </div>
             </div>
         </div>
@@ -1083,7 +1036,7 @@
     <section class="take-action-section">
         <div class="container">
             <div class="take-action-circle">
-                <img src="/images/circle.svg" alt="Take Action Icon" class="img-fluid">
+                <img src="/images/circle.svg" alt="Take Action Icon">
             </div>
             <h1 class="take-action-title">Take Action</h1>
             <p class="take-action-text">
@@ -1099,7 +1052,7 @@
         <div class="footer-container">
             <!-- Column 1: Logo -->
             <div class="footer-column">
-                <img src="images/foot-logo.png" alt="Company Logo" class="footer-logo img-fluid">
+                <img src="images/foot-logo.png" alt="Company Logo" class="footer-logo">
             </div>
 
             <!-- Column 2: Navigation -->
@@ -1158,14 +1111,12 @@
     </div>
 
     <script>
-        // Improved JavaScript with better mobile detection
         function handleEmojiClick(sectionName) {
             alert(`You clicked the ${sectionName} section`);
         }
 
         // Focus section animation
         document.addEventListener('DOMContentLoaded', function () {
-            // Animation observer
             const focusSection = document.querySelector('.focus-section');
             const animateElements = document.querySelectorAll('.animate-up');
 
@@ -1179,27 +1130,7 @@
                 });
             }, { threshold: 0.1 });
 
-            if (focusSection) {
-                observer.observe(focusSection);
-            }
-
-            // Force mobile layout in desktop mode when width is small
-            function checkViewport() {
-                const isMobile = window.innerWidth <= 767;
-                document.documentElement.classList.toggle('mobile-view', isMobile);
-                
-                // Additional adjustments for mobile
-                if (isMobile) {
-                    // Ensure hero section has proper height
-                    const hero = document.querySelector('.hero');
-                    if (hero) {
-                        hero.style.height = `${window.innerHeight * 0.8}px`;
-                    }
-                }
-            }
-            
-            window.addEventListener('resize', checkViewport);
-            checkViewport();
+            observer.observe(focusSection);
         });
 
         // Gallery functionality
@@ -1235,15 +1166,9 @@
 
         function updateModal() {
             const item = galleryData[currentIndex];
-            if (item) {
-                document.getElementById('modalImage').src = item.image;
-                if (item.title) {
-                    document.getElementById('modalTitle').textContent = item.title;
-                }
-                if (item.description) {
-                    document.getElementById('modalDescription').textContent = item.description;
-                }
-            }
+            document.getElementById('modalImage').src = item.image;
+            document.getElementById('modalTitle').textContent = item.title || '';
+            document.getElementById('modalDescription').textContent = item.description || '';
         }
 
         function prevImage() {
