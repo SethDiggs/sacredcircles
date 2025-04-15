@@ -177,20 +177,12 @@
         /* iOS-specific fixes */
 @supports (-webkit-touch-callout: none) {
   .hero {
-   
+    background-attachment: scroll !important;
     -webkit-background-size: cover !important;
   }
 }
 
-/* iPhone 11 Pro specific optimization */
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-  .hero {
-    
-    background-position: center top; /* Adjust as needed */
-    background-size: cover;
-    height: 550px;
-  }
-}
+
 
         @media (max-width: 767px) {
             .hero {
